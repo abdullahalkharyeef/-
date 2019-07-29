@@ -1,0 +1,24 @@
+#app{
+text-align: center;
+margin: inherit;
+padding: inherit;
+font-size:2em;
+display: block;
+}
+#start{
+  font-size: 8em;
+}
+#aayaStart{
+  padding-top: 15%;
+  font-size: 1.5em;
+}
+#list{
+  text-align: center;
+  margin: inherit;
+  padding: inherit;
+  font-size:2em;
+  display: none;
+}
+#video{
+  padding-top: 15%;
+}
