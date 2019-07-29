@@ -12,9 +12,34 @@
 
     <div id="list">
         <ol>
-          <li v-for="list in list" v-text="list"></li>
+          <li onclick="goArabic()">{{list[0]}}</li>
+          <li onclick="goQuran()">{{list[1]}}</li>
+          <li onclick="goHadith()">{{list[2]}}</li>
+          <li onclick="goSyrah()">{{list[3]}}</li>
+          <li onclick="goTarikh()">{{list[4]}}</li>
+          <li onclick="goAqydah()">{{list[5]}}</li>
         </ol>
       </div>
+
+    <div class="alalom" id="arabic">
+      <div><iframe src="https://www.youtube.com/embed/videoseries?list=PLZmiPrHYOIsTCtSS6-QNINDmWITQAQMVg" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen></iframe></div>
+    </div>
+
+
+    <div class="alalom" id="quran"></div>
+
+
+    <div class="alalom" id="hadith"></div>
+
+
+    <div class="alalom" id="syrah"></div>
+
+
+    <div class="alalom" id="tarikh"></div>
+
+
+    <div class="alalom" id="aqydah"></div>
+
 
     <script src="./js/vue.js"></script>
     <script src="./js/main.js"></script>
