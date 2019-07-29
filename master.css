@@ -24,5 +24,21 @@ left: 0;
   top: 0;
   left: 0;
 }
+.alalom{
+  text-align: center;
+  margin: inherit;
+  padding: inherit;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#arabic{display: none;}
+#quran{display: none;}
+#hadith{display: none;}
+#syrah{display: none;}
+#tarikh{display: none;}
+#aqydah{display: none;}
 #video{
 }
