@@ -6,11 +6,15 @@
   <link rel="stylesheet" href="./css/master.css">
 </head>
 <body>
-  <div id="app" onclick="goList()">
-      <div> {{ nameStart }} <br><br> {{aayaStart}} </div>
+  <div id="start" onclick="goList()">
+      <div class="start"> {{ nameStart }} <br></div>
+      <div id='aayaStart'> {{ aayaStart }}</div>
     </div>
 
-    <div id="list">
+    <div id="app">
+
+      <div id="list">
+
         <ol>
           <li onclick="goArabic()">{{list[0]}}</li>
           <li onclick="goQuran()">{{list[1]}}</li>
@@ -22,24 +26,64 @@
       </div>
 
     <div class="alalom" id="arabic">
-      <div><iframe src="https://www.youtube.com/embed/videoseries?list=PLZmiPrHYOIsTCtSS6-QNINDmWITQAQMVg" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen></iframe></div>
+      <ul id="navbar">
+       <li class="linavbar"><a class="active" onclick="goListReturn()">رجوع</a></li>
+     </ul>
+      <div id="video"><iframe  width="840" height="471" src="https://www.youtube.com/embed/qSj_Q8hUJr4" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen=""></iframe></div>
+      <ol style="margin:4% 4% 0% 9%;">
+        <li>{{arabicElem[0]}}<br>{{arabicConsistsOf[0][1]}}<br>{{arabicConsistsOf[0][2]}}<br>{{arabicConsistsOf[0][3]}}<br>{{arabicConsistsOf[0][4]}}<br>{{arabicConsistsOf[0][5]}}<br>{{arabicConsistsOf[0][6]}}<br>{{arabicConsistsOf[0][7]}}<br>{{arabicConsistsOf[0][8]}}<br>{{arabicConsistsOf[0][9]}}<br>{{arabicConsistsOf[0][10]}}</li><p>
+        <li>{{arabicElem[1]}}<br>{{arabicConsistsOf[1][1]}}<br>{{arabicConsistsOf[1][2]}}<br>{{arabicConsistsOf[1][3]}}<br>{{arabicConsistsOf[1][4]}}<br>{{arabicConsistsOf[1][5]}}<br>{{arabicConsistsOf[1][6]}}<br>{{arabicConsistsOf[1][7]}}<br>{{arabicConsistsOf[1][8]}}<br>{{arabicConsistsOf[1][9]}}<br>{{arabicConsistsOf[1][10]}}</li><p>
+        <li>{{arabicElem[2]}}<br>{{arabicConsistsOf[2][1]}} <span onclick="gourl('https://www.youtube.com/watch?v=JK_J97ueOno')">https://www.youtube.com/watch?v=JK_J97ueOno</span></li><p>
+        <li>{{arabicElem[3]}}<br>{{arabicConsistsOf[3][1]}}<br>{{arabicConsistsOf[3][2]}}</li><p>
+        <li>{{arabicElem[4]}}<br>{{arabicConsistsOf[4][1]}}</li><p>
+        <li>{{arabicElem[5]}}<br>{{arabicConsistsOf[5][1]}}<br>{{arabicConsistsOf[5][2]}}<br>{{arabicConsistsOf[5][3]}}</li><p>
+        <li>{{arabicElem[6]}}<br>{{arabicConsistsOf[6][1]}}<br>{{arabicConsistsOf[6][2]}}<br>{{arabicConsistsOf[6][3]}}<br>{{arabicConsistsOf[6][4]}}</li><p>
+        <li>{{arabicElem[7]}}<br>{{arabicConsistsOf[7][1]}}<br>{{arabicConsistsOf[7][2]}}<br>{{arabicConsistsOf[7][3]}}<br>{{arabicConsistsOf[7][4]}}<br>{{arabicConsistsOf[7][5]}}<br>{{arabicConsistsOf[7][6]}}<br>{{arabicConsistsOf[7][7]}}<br>{{arabicConsistsOf[7][8]}}<br>{{arabicConsistsOf[7][9]}}<br>{{arabicConsistsOf[7][10]}}<br>{{arabicConsistsOf[7][11]}}<br>{{arabicConsistsOf[7][12]}}<br>{{arabicConsistsOf[7][13]}}<br>{{arabicConsistsOf[7][14]}}<br>{{arabicConsistsOf[7][15]}}<br>{{arabicConsistsOf[7][16]}}</li><p>
+      </ol>
     </div>
 
 
-    <div class="alalom" id="quran"></div>
+    <div class="alalom" id="quran">
+      <ul id="navbar">
+       <li class="linavbar"><a class="active" onclick="goListReturn()">رجوع</a></li>
+     </ul>
+      <div id="video"><iframe  width="840" height="471" src="https://www.youtube.com/embed/qSj_Q8hUJr4" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen=""></iframe></div>
+
+    </div>
 
 
-    <div class="alalom" id="hadith"></div>
+    <div class="alalom" id="hadith">
+      <ul id="navbar">
+       <li class="linavbar"><a class="active" onclick="goListReturn()">رجوع</a></li>
+     </ul>
+      <div id="video"><iframe  width="840" height="471" src="https://www.youtube.com/embed/qSj_Q8hUJr4" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen=""></iframe></div>
+    </div>
 
 
-    <div class="alalom" id="syrah"></div>
+    <div class="alalom" id="syrah">
+      <ul id="navbar">
+       <li class="linavbar"><a class="active" onclick="goListReturn()">رجوع</a></li>
+     </ul>
+      <div id="video"><iframe  width="840" height="471" src="https://www.youtube.com/embed/qSj_Q8hUJr4" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen=""></iframe></div>
+    </div>
 
 
-    <div class="alalom" id="tarikh"></div>
+    <div class="alalom" id="tarikh">
+      <ul id="navbar">
+       <li class="linavbar"><a class="active" onclick="goListReturn()">رجوع</a></li>
+     </ul>
+      <div id="video"><iframe  width="840" height="471" src="https://www.youtube.com/embed/qSj_Q8hUJr4" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen=""></iframe></div>
+    </div>
 
 
-    <div class="alalom" id="aqydah"></div>
+    <div class="alalom" id="aqydah">
+      <ul id="navbar">
+       <li class="linavbar"><a class="active" onclick="goListReturn()">رجوع</a></li>
+     </ul>
+      <div id="video"><iframe  width="840" height="471" src="https://www.youtube.com/embed/qSj_Q8hUJr4" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen=""></iframe></div>
+    </div>
 
+  </div>
 
     <script src="./js/vue.js"></script>
     <script src="./js/main.js"></script>
