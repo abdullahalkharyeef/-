@@ -1,5 +1,8 @@
 @import url(https://fonts.googleapis.com/earlyaccess/lateef.css);
 /* font-family: 'Lateef', serif; */
+html{
+  background-color: snow;
+}
 #start{
 font-family: 'Lateef', serif;
 display: block;
@@ -16,6 +19,7 @@ left: 0;
 .start{
   margin: 35% 5% 0% 5%;
   font-size: 1.5em;
+  color: #4d81b1;
 }
 #aayaStart{
 margin: 30% 5% 0% 5%;
@@ -23,6 +27,32 @@ font-size: 0.8em;
 color: #4CAF50;
 }
 #list{
+  display: none;
+  font-family: 'Lateef', serif;
+  font-size: 5.3em;
+  text-align: center;
+  margin: inherit;
+  padding: inherit;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#listthaqafa{
+  display: none;
+  font-family: 'Lateef', serif;
+  font-size: 5.3em;
+  text-align: center;
+  margin: inherit;
+  padding: inherit;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#listalom{
   display: none;
   font-family: 'Lateef', serif;
   font-size: 5.3em;
@@ -72,13 +102,15 @@ li a:hover:not(.active) {
 }
 href{
   color: black;
-  text-align: justify;
   text-decoration: block;
 }
 
 
 ol{
   margin: 45% 10% 0% 10%;
+}
+#olList{
+ margin: 70% 10% 0% 10%;
 }
 span{
 color: #4CAF50;
