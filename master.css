@@ -137,8 +137,10 @@ color: #4CAF50;
 #syrah{display: none;}
 #tarikh{display: none;}
 #aqydah{display: none;}
-#video{
+iframe {
   text-align: center;
   margin: 5% 0% 0% 0%;
+  height: 800px;
+  width: 80%;
   padding: inherit;
 }
