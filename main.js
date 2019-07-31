@@ -12,17 +12,19 @@ var start = new Vue ({
 var list = new Vue ({
   el: '#app',
   data:{
-    list: ['اللُّغة العربيَّة','علوم القرآن','علم الحديث','دراسة السيرة','علم التَّاريخ','علم العقيدة'],
-            arabicElem:[
-                    // العناصر الأساسية: ، وهي 8 عناصر
-                      'أهميَّة اللُّغة العربيَّة ومكانتها:',
-                      'أنواع علوم اللُّغة العربيَّة:',
-                      'نُبذَةٌ تاريخيّةٌ:',
-                      'أبرز أعلام اللُّغة العربيَّة:',
-                      'من أهمّ الكتب المؤلّفة في العلوم العربيَّة:',
-                      'نَمَاذِج من جمال اللُّغة العربيَّة وبهاؤها وعيون أشعارها وبيانها:',
-                      'كيف نتحدَّثُ اللُّغةَ العربيَّة:',
-                      'خُطَّة مُقْتَرَحَة لِدِرَاسَة اللُّغة العربيَّة:'],
+    sections:['أبجديَّات الثقافة للجيل الصاعد','مداخل العلوم للجيل الصاعد'],
+    listthaqafa:['السيرة',''],
+    listalom: ['اللُّغة العربيَّة','علوم القرآن','علم الحديث','دراسة السيرة','علم التَّاريخ','علم العقيدة'],
+      arabicalom:[
+              // العناصر الأساسية: ، وهي 8 عناصر
+                'أهميَّة اللُّغة العربيَّة ومكانتها:',
+                'أنواع علوم اللُّغة العربيَّة:',
+                'نُبذَةٌ تاريخيّةٌ:',
+                'أبرز أعلام اللُّغة العربيَّة:',
+                'من أهمّ الكتب المؤلّفة في العلوم العربيَّة:',
+                'نَمَاذِج من جمال اللُّغة العربيَّة وبهاؤها وعيون أشعارها وبيانها:',
+                'كيف نتحدَّثُ اللُّغةَ العربيَّة:',
+                'خُطَّة مُقْتَرَحَة لِدِرَاسَة اللُّغة العربيَّة:'],
       arabicConsistsOf:[
               // العناصر الأساسية: ، وهي 8 عناصر  + بَيَاناتِها:
 
@@ -116,6 +118,22 @@ function goList() {
   document.querySelector("#list").style.display="block";
 }
 function goListReturn() {
+  document.querySelector("#start").style.display="none";
+  document.querySelector("#list").style.display="block";
+  document.querySelector("#listalom").style.display="none";
+  document.querySelector("#listthaqafa").style.display="none";
+}
+function goListthaqafa() {
+  document.querySelector("#start").style.display="none";
+  document.querySelector("#list").style.display="none";
+  document.querySelector("#listthaqafa").style.display="block";
+}
+function goListalom() {
+  document.querySelector("#start").style.display="none";
+  document.querySelector("#list").style.display="none";
+  document.querySelector("#listalom").style.display="block";
+}
+function goalomListReturn() {
   document.querySelector("#arabic").style.display="none";
   document.querySelector("#quran").style.display="none";
   document.querySelector("#hadith").style.display="none";
@@ -123,30 +141,30 @@ function goListReturn() {
   document.querySelector("#tarikh").style.display="none";
   document.querySelector("#aqydah").style.display="none";
   document.querySelector("#app").style.display="block";
-  document.querySelector("#list").style.display="block";
+  document.querySelector("#listalom").style.display="block";
 }
 function goArabic() {
-  document.querySelector("#list").style.display="none";
+  document.querySelector("#listalom").style.display="none";
   document.querySelector("#arabic").style.display="block";
 }
 function goQuran() {
-  document.querySelector("#list").style.display="none";
+  document.querySelector("#listalom").style.display="none";
   document.querySelector("#quran").style.display="block";
 }
 function goHadith() {
-  document.querySelector("#list").style.display="none";
+  document.querySelector("#listalom").style.display="none";
   document.querySelector("#hadith").style.display="block";
 }
 function goSyrah() {
-  document.querySelector("#list").style.display="none";
+  document.querySelector("#listalom").style.display="none";
   document.querySelector("#syrah").style.display="block";
 }
 function goTarikh() {
-  document.querySelector("#list").style.display="none";
+  document.querySelector("#listalom").style.display="none";
   document.querySelector("#tarikh").style.display="block";
 }
 function goAqydah() {
-  document.querySelector("#list").style.display="none";
+  document.querySelector("#listalom").style.display="none";
   document.querySelector("#aqydah").style.display="block";
 }
 function gourl(url) {
