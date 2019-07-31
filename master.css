@@ -140,7 +140,7 @@ color: #4CAF50;
 iframe {
   text-align: center;
   margin: 5% 0% 0% 0%;
-  height: 50%;
-  width: 50%;
+  height: 100%;
+  width: 100%;
   padding: inherit;
 }
