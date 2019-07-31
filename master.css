@@ -18,18 +18,18 @@ left: 0;
 }
 .start{
   margin: 15% 5% 0% 5%;
-  font-size: 0.4em;
+  font-size: 1em;
   color: #4d81b1;
 }
 #aayaStart{
 margin: 5% 5% 0% 5%;
-font-size: 0.4em;
+font-size: 0.9em;
 color: #4CAF50;
 }
 #list{
   display: none;
   font-family: 'Lateef', serif;
-  font-size: 1.325em;
+  font-size: 1.9em;
   text-align: center;
   color: #4d81b1;
   margin: inherit;
@@ -43,7 +43,7 @@ color: #4CAF50;
 #listthaqafa{
   display: none;
   font-family: 'Lateef', serif;
-  font-size: 1.325em;
+  font-size: 1.9em;
   text-align: center;
   color: #4d81b1;
   margin: inherit;
@@ -57,7 +57,7 @@ color: #4CAF50;
 #listalom{
   display: none;
   font-family: 'Lateef', serif;
-  font-size: 1.325em;
+  font-size: 1.9em;
   text-align: center;
   color: #4d81b1;
   margin: inherit;
@@ -99,7 +99,7 @@ li a:hover:not(.active) {
 .active {
   font-family: 'Lateef', serif;
   background-color: #4CAF50;
-  font-size: 0.475em;
+  font-size: 0.9em;
   /* padding-left: 130%;
   padding-bottom: 100% */
 }
@@ -121,7 +121,7 @@ color: #4CAF50;
 .alalom{
   text-align: right;
   font-family: 'Lateef', serif;
-  font-size: 0.625em;
+  font-size: 1.3em;
   font-weight: 450;
   margin: inherit;
   padding: inherit;
@@ -140,7 +140,7 @@ color: #4CAF50;
 iframe {
   text-align: center;
   margin: 5% 0% 0% 0%;
-  height: 800px;
-  width: 80%;
+  height: 50%;
+  width: 50%;
   padding: inherit;
 }
