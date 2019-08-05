@@ -143,8 +143,10 @@ color: #4CAF50;
 #syrah{display: none;}
 #tarikh{display: none;}
 #aqydah{display: none;}
-iframe {
+#video{
   text-align: center;
+}
+iframe {
   margin: 6% 8% 2% 8%;
   padding: inherit;
 }
