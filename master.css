@@ -8,7 +8,7 @@ font-family: 'Lateef', serif;
 display: block;
 text-align: center;
 margin: inherit;
-font-size: 5.9em;
+font-size: 3em;
 padding: inherit;
 font-weight: 650;
 width: 100%;
@@ -30,7 +30,7 @@ color: #4CAF50;
 #list{
   display: none;
   font-family: 'Lateef', serif;
-  font-size: 4.4em;
+  font-size: 2.4em;
   text-align: center;
   color: #4d81b1;
   margin: inherit;
@@ -45,7 +45,7 @@ color: #4CAF50;
 #listthaqafa{
   display: none;
   font-family: 'Lateef', serif;
-  font-size: 4.4em;
+  font-size: 2.4em;
   text-align: center;
   color: #4d81b1;
   margin: inherit;
@@ -60,7 +60,7 @@ color: #4CAF50;
 #listalom{
   display: none;
   font-family: 'Lateef', serif;
-  font-size: 4.4em;
+  font-size: 2.4em;
   text-align: center;
   color: #4d81b1;
   margin: inherit;
@@ -125,7 +125,7 @@ color: #4CAF50;
 .alalom{
   text-align: right;
   font-family: 'Lateef', serif;
-  font-size: 1.3em;
+  font-size: 0.6em;
   font-weight: 450;
   margin: inherit;
   padding: inherit;
