@@ -8,7 +8,7 @@ font-family: 'Lateef', serif;
 display: block;
 text-align: center;
 margin: inherit;
-font-size: 3em;
+font-size: 1.5em;
 padding: inherit;
 font-weight: 650;
 width: 100%;
@@ -18,7 +18,7 @@ top: 0;
 left: 0;
 }
 .start{
-  margin: 60% 5% 0% 5%;
+  margin: 40% 5% 0% 5%;
   font-size: 1.2em;
   color: #4d81b1;
 }
