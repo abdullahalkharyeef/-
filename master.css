@@ -18,7 +18,7 @@ top: 0;
 left: 0;
 }
 .start{
-  margin: 60% 5% 0% 5%;
+  margin: 20% 0% 0% 0%;
   font-size: 1.2em;
   color: #4d81b1;
 }
@@ -114,7 +114,7 @@ ol{
   margin: 45% 10% 0% 10%;
 }
 #olList{
- margin: 70% 10% 0% 10%;
+ margin: 50% 5% 0% 0%;
 }
 span{
  color: #4CAF50;
