@@ -6,21 +6,35 @@
   <link rel="stylesheet" href="master.css">
 </head>
 <body>
-  <div id="start" onclick="goList()">
-      <div class="start"> {{ nameStart }} <br></div>
-      <div id='aayaStart'> {{ aayaStart }}</div>
+  <div id="start" v-if="start" onclick="goList()">
+      <div class="start" onclick="goList()"> {{ nameStart }} <br></div>
+      <div id='aayaStart' onclick="goList()"> {{ aayaStart }}</div>
     </div>
 
     <div id="app">
-      <div id="list">
+      <div id="list" v-if="Firstlist">
           <ol id="olList">
             <li onclick="goListthaqafa()">{{sections[0]}}</li>
             <li onclick="goListalom()">{{sections[1]}}</li>
           </ol>
         </div>
 
-    <div id="listalom">
-      <ul id="navbar">
+        <div v-if="Listthaqafa" id="listthaqafa">
+          <ul id="navbar" v-if="linavbar">
+           <li class="linavbar"><a class="active" onclick="goListReturn()">رجوع</a></li>
+         </ul>
+          <ol>
+            <li onclick="go()">{{listthaqafa[0]}}</li>
+            <li onclick="go()">{{listthaqafa[1]}}</li>
+            <li onclick="go()">{{listthaqafa[2]}}</li>
+            <li onclick="go()">{{listthaqafa[3]}}</li>
+            <li onclick="go()">{{listthaqafa[4]}}</li>
+            <li onclick="go()">{{listthaqafa[5]}}</li>
+          </ol>
+        </div>
+
+    <div v-if="Listalom" id="listalom">
+      <ul id="navbar" v-if="linavbar">
        <li class="linavbar"><a class="active" onclick="goListReturn()">رجوع</a></li>
      </ul>
       <ol>
@@ -33,44 +47,19 @@
       </ol>
     </div>
 
-    <div id="listthaqafa">
-      <ul id="navbar">
+      <!-- قائمة الثقافة:    انتظار التسجيل  -->
+    <!-- <div class="thaqafa">
+      <ul id="navbar" v-if="linavbar">
        <li class="linavbar"><a class="active" onclick="goListReturn()">رجوع</a></li>
      </ul>
-      <ol>
-        <li onclick="go()">{{listthaqafa[0]}}</li>
-        <li onclick="go()">{{listthaqafa[1]}}</li>
-        <li onclick="go()">{{listthaqafa[2]}}</li>
-        <li onclick="go()">{{listthaqafa[3]}}</li>
-        <li onclick="go()">{{listthaqafa[4]}}</li>
-        <li onclick="go()">{{listthaqafa[5]}}</li>
-      </ol>
-    </div>
+    </div> -->
 
 
-    <div class="thaqafa" id="alsyrah">
-      <ul id="navbar">
+    <div class="alalom" v-if="arabic" id="arabic">
+      <ul id="navbar" class="bigsize" class="bigsize" v-if="linavbaralom">
        <li class="linavbar"><a class="active" onclick="goalomListReturn()">رجوع</a></li>
      </ul>
-      <div id="video"><iframe src="https://www.youtube.com/embed/qSj_Q8hUJr4" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen=""></iframe></div>
-      <ol style="margin:4% 4% 0% 9%;">
-        <li>{{arabicalom[0]}}<br>{{arabicConsistsOf[0][1]}}<br>{{arabicConsistsOf[0][2]}}<br>{{arabicConsistsOf[0][3]}}<br>{{arabicConsistsOf[0][4]}}<br>{{arabicConsistsOf[0][5]}}<br>{{arabicConsistsOf[0][6]}}<br>{{arabicConsistsOf[0][7]}}<br>{{arabicConsistsOf[0][8]}}<br>{{arabicConsistsOf[0][9]}}<br>{{arabicConsistsOf[0][10]}}</li><p>
-        <li>{{arabicalom[1]}}<br>{{arabicConsistsOf[1][1]}}<br>{{arabicConsistsOf[1][2]}}<br>{{arabicConsistsOf[1][3]}}<br>{{arabicConsistsOf[1][4]}}<br>{{arabicConsistsOf[1][5]}}<br>{{arabicConsistsOf[1][6]}}<br>{{arabicConsistsOf[1][7]}}<br>{{arabicConsistsOf[1][8]}}<br>{{arabicConsistsOf[1][9]}}<br>{{arabicConsistsOf[1][10]}}</li><p>
-        <li>{{arabicalom[2]}}<br>{{arabicConsistsOf[2][1]}} <span onclick="gourl('https://www.youtube.com/watch?v=JK_J97ueOno')">https://www.youtube.com/watch?v=JK_J97ueOno</span></li><p>
-        <li>{{arabicalom[3]}}<br>{{arabicConsistsOf[3][1]}}<br>{{arabicConsistsOf[3][2]}}</li><p>
-        <li>{{arabicalom[4]}}<br>{{arabicConsistsOf[4][1]}}</li><p>
-        <li>{{arabicalom[5]}}<br>{{arabicConsistsOf[5][1]}}<br>{{arabicConsistsOf[5][2]}}<br>{{arabicConsistsOf[5][3]}}</li><p>
-        <li>{{arabicalom[6]}}<br>{{arabicConsistsOf[6][1]}}<br>{{arabicConsistsOf[6][2]}}<br>{{arabicConsistsOf[6][3]}}<br>{{arabicConsistsOf[6][4]}}</li><p>
-        <li>{{arabicalom[7]}}<br>{{arabicConsistsOf[7][1]}}<br>{{arabicConsistsOf[7][2]}}<br>{{arabicConsistsOf[7][3]}}<br>{{arabicConsistsOf[7][4]}}<br>{{arabicConsistsOf[7][5]}}<br>{{arabicConsistsOf[7][6]}}<br>{{arabicConsistsOf[7][7]}}<br>{{arabicConsistsOf[7][8]}}<br>{{arabicConsistsOf[7][9]}}<br>{{arabicConsistsOf[7][10]}}<br>{{arabicConsistsOf[7][11]}}<br>{{arabicConsistsOf[7][12]}}<br>{{arabicConsistsOf[7][13]}}<br>{{arabicConsistsOf[7][14]}}<br>{{arabicConsistsOf[7][15]}}<br>{{arabicConsistsOf[7][16]}}</li><p>
-      </ol>
-    </div>
-
-
-    <div class="alalom" id="arabic">
-      <ul id="navbar">
-       <li class="linavbar"><a class="active" onclick="goalomListReturn()">رجوع</a></li>
-     </ul>
-      <div id="video"><iframe src="https://www.youtube.com/embed/qSj_Q8hUJr4" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen=""></iframe></div>
+      <div id="video"><iframe src="https://www.youtube.com/embed/qSj_Q8hUJr4" frameborder="0" allow="accelerometer; autoplay;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
       <ol style="margin:8% 8% 0% 15%;  font-size: 3.1em; font-weight:850;">
         <li>{{arabicalom[0]}}<br>{{arabicConsistsOf[0][1]}}<br>{{arabicConsistsOf[0][2]}}<br>{{arabicConsistsOf[0][3]}}<br>{{arabicConsistsOf[0][4]}}<br>{{arabicConsistsOf[0][5]}}<br>{{arabicConsistsOf[0][6]}}<br>{{arabicConsistsOf[0][7]}}<br>{{arabicConsistsOf[0][8]}}<br>{{arabicConsistsOf[0][9]}}<br>{{arabicConsistsOf[0][10]}}</li><p>
         <li>{{arabicalom[1]}}<br>{{arabicConsistsOf[1][1]}}<br>{{arabicConsistsOf[1][2]}}<br>{{arabicConsistsOf[1][3]}}<br>{{arabicConsistsOf[1][4]}}<br>{{arabicConsistsOf[1][5]}}<br>{{arabicConsistsOf[1][6]}}<br>{{arabicConsistsOf[1][7]}}<br>{{arabicConsistsOf[1][8]}}<br>{{arabicConsistsOf[1][9]}}<br>{{arabicConsistsOf[1][10]}}</li><p>
@@ -83,11 +72,11 @@
       </ol>
     </div>
 
-    <div class="alalom" id="quran">
-      <ul id="navbar">
+    <div class="alalom" v-if="quran" id="quran">
+      <ul id="navbar" class="bigsize" v-if="linavbaralom">
        <li class="linavbar"><a class="active" onclick="goalomListReturn()">رجوع</a></li>
      </ul>
-      <div id="video"><iframe src="https://www.youtube.com/embed/xKCnphE-ffA" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen=""></iframe></div>
+      <div id="video"><iframe src="https://www.youtube.com/embed/xKCnphE-ffA" frameborder="0" allow="accelerometer; autoplay;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
       <ol style="margin:8% 8% 0% 15%; font-size: 3.1em; font-weight:850;">
         <li>{{quranalom[0]}}<br>{{quranConsistsOf[0][1]}}<br>{{quranConsistsOf[0][2]}}<br>{{quranConsistsOf[0][3]}}<br>{{quranConsistsOf[0][4]}}<br>{{quranConsistsOf[0][5]}}<br>{{quranConsistsOf[0][6]}}<br>{{quranConsistsOf[0][7]}}<br>{{quranConsistsOf[0][8]}}<br>{{quranConsistsOf[0][9]}}<br>{{quranConsistsOf[0][10]}}<br>{{quranConsistsOf[0][11]}}<br>{{quranConsistsOf[0][12]}}<br>{{quranConsistsOf[0][13]}}</li><p>
           <li>{{quranalom[1]}}<br>{{quranConsistsOf[1][1]}}<br>{{quranConsistsOf[1][2]}}<br>{{quranConsistsOf[1][3]}}<br>{{quranConsistsOf[1][4]}}<br>{{quranConsistsOf[1][5]}}</li><p>
@@ -102,32 +91,32 @@
       </ol>
     </div>
 
-    <div class="alalom" id="hadith">
-      <ul id="navbar">
+    <div class="alalom" v-if="hadith" id="hadith">
+      <ul id="navbar" class="bigsize" v-if="linavbaralom">
        <li class="linavbar"><a class="active" onclick="goalomListReturn()">رجوع</a></li>
      </ul>
-      <div id="video"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vO4bivZ9VCs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div id="video"><iframe src="https://www.youtube-nocookie.com/embed/vO4bivZ9VCs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     </div>
 
-    <div class="alalom" id="syrah">
-      <ul id="navbar">
+    <div class="alalom" v-if="syrah" id="syrah">
+      <ul id="navbar" class="bigsize" v-if="linavbaralom">
        <li class="linavbar"><a class="active" onclick="goalomListReturn()">رجوع</a></li>
      </ul>
-      <div id="video"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zD3-FY79JHQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div id="video"><iframe src="https://www.youtube-nocookie.com/embed/zD3-FY79JHQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     </div>
 
-    <div class="alalom" id="tarikh">
-      <ul id="navbar">
+    <div class="alalom" v-if="tarikh" id="tarikh">
+      <ul id="navbar" class="bigsize" v-if="linavbaralom">
        <li class="linavbar"><a class="active" onclick="goalomListReturn()">رجوع</a></li>
      </ul>
-      <div id="video"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MVg0RwIUJNA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div id="video"><iframe src="https://www.youtube-nocookie.com/embed/MVg0RwIUJNA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     </div>
 
-    <div class="alalom" id="aqydah">
-      <ul id="navbar">
+    <div class="alalom" v-if="aqydah" id="aqydah">
+      <ul id="navbar" class="bigsize"  v-if="linavbaralom">
        <li class="linavbar"><a class="active" onclick="goalomListReturn()">رجوع</a></li>
      </ul>
-      <div id="video"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sbbax79XfAM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div id="video"><iframe src="https://www.youtube-nocookie.com/embed/sbbax79XfAM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     </div>
 
   </div>
