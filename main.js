@@ -1,6 +1,7 @@
 var start = new Vue ({
   el: '#start',
   data:{
+    start:true,
     nameStart:'الجيل الصاعد',
     aayaStart: 'وَجَعَلْنَا مِنْهُمْ أَئِمَّةً يَهْدُونَ بِأَمْرِنَا لَمَّا صَبَرُوا۟ وَكَانُوا۟ بِـَٔايَٰتِنَا يُوقِنُونَ',
          }
@@ -12,6 +13,18 @@ var start = new Vue ({
 var list = new Vue ({
   el: '#app',
   data:{
+    Firstlist:false,
+    start:false,
+    linavbar:false,
+    linavbaralom:false,
+    Listalom:false,
+    Listthaqafa:false,
+    arabic:false,
+    quran:false,
+    hadith:false,
+    syrah:false,
+    tarikh:false,
+    aqydah:false,
     sections:['أبجديَّات الثقافة للجيل الصاعد','مداخل العلوم للجيل الصاعد'],
     listthaqafa:['السيرة',''],
     listalom: ['اللُّغة العربيَّة','علوم القرآن','علم الحديث','دراسة السيرة','علم التَّاريخ','علم العقيدة'],
@@ -201,59 +214,78 @@ var list = new Vue ({
 
 
 function goList() {
-  document.querySelector("#start").style.display="none";
-  document.querySelector("#app").style.display="block";
-  document.querySelector("#list").style.display="block";
-}
-function goListReturn() {
-  document.querySelector("#start").style.display="none";
-  document.querySelector("#list").style.display="block";
-  document.querySelector("#listalom").style.display="none";
-  document.querySelector("#listthaqafa").style.display="none";
+  start.start=false;
+  list.Firstlist=true;
 }
 function goListthaqafa() {
-  document.querySelector("#start").style.display="none";
-  document.querySelector("#list").style.display="none";
-  document.querySelector("#listthaqafa").style.display="block";
+   list.Listalom=false;
+   list.Listthaqafa=true;
+   list.linavbar=true;
+   list.start=false;
+   list.Firstlist=false;
+   list.Listthaqafa=true;
 }
 function goListalom() {
-  document.querySelector("#start").style.display="none";
-  document.querySelector("#list").style.display="none";
-  document.querySelector("#listalom").style.display="block";
+  list.Listalom=true;
+  list.Listthaqafa=false;
+  list.linavbar=true;
+  list.start=false;
+  list.Firstlist=false;
+  list.Listalom=true;
+}
+function goListReturn() {
+  list.Firstlist=true;
+  list.Listalom=false;
+  list.Listthaqafa=false;
+  list.linavbar=false;
 }
 function goalomListReturn() {
-  document.querySelector("#arabic").style.display="none";
-  document.querySelector("#quran").style.display="none";
-  document.querySelector("#hadith").style.display="none";
-  document.querySelector("#syrah").style.display="none";
-  document.querySelector("#tarikh").style.display="none";
-  document.querySelector("#aqydah").style.display="none";
-  document.querySelector("#app").style.display="block";
-  document.querySelector("#listalom").style.display="block";
+  list.linavbar=true;
+  list.linavbaralom=false;
+  list.arabic=false;
+  list.quran=false;
+  list.hadith=false;
+  list.syrah=false;
+  list.tarikh=false;
+  list.aqydah=false;
+  list.Firstlist=false;
+  list.Listalom=true;
 }
 function goArabic() {
-  document.querySelector("#listalom").style.display="none";
-  document.querySelector("#arabic").style.display="block";
+  list.linavbar=false;
+  list.linavbaralom=true;
+  list.Listalom=false;
+  list.arabic=true;
 }
 function goQuran() {
-  document.querySelector("#listalom").style.display="none";
-  document.querySelector("#quran").style.display="block";
+  list.linavbar=false;
+  list.linavbaralom=true;
+  list.Listalom=false;
+  list.quran=true;
 }
 function goHadith() {
-  document.querySelector("#listalom").style.display="none";
-  document.querySelector("#hadith").style.display="block";
+  list.linavbar=false;
+  list.linavbaralom=true;
+  list.Listalom=false;
+  list.hadith=true;
 }
 function goSyrah() {
-  document.querySelector("#listalom").style.display="none";
-  document.querySelector("#syrah").style.display="block";
+  list.linavbar=false;
+  list.linavbaralom=true;
+  list.Listalom=false;
+  list.syrah=true;
 }
 function goTarikh() {
-  document.querySelector("#listalom").style.display="none";
-  document.querySelector("#tarikh").style.display="block";
+  list.linavbar=false;
+  list.linavbaralom=true;
+  list.Listalom=false;
+  list.tarikh=true;
 }
 function goAqydah() {
-  document.querySelector("#listalom").style.display="none";
-  document.querySelector("#aqydah").style.display="block";
+  list.linavbar=false;
+  list.linavbaralom=true;
+  list.Listalom= false;
+  list.aqydah= true;
 }
 function gourl(url) {
   urlOpen = window.open(url);
