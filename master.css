@@ -59,7 +59,7 @@ color: #4CAF50;
 #listalom{
   font-family: 'Lateef', serif;
   font-size: 4.4em;
-  text-align: center;
+  /* text-align: center; */
   color: #4d81b1;
   margin: inherit;
   padding: inherit;
@@ -72,7 +72,7 @@ color: #4CAF50;
 }
 
 .linavbar {
-  float: right;
+  /* float: right; */
   list-style-type: none;
   font-family: 'Lateef', serif;
 }
@@ -122,6 +122,7 @@ span{
 .alalom{
   text-align: right;
   font-family: 'Lateef', serif;
+  /* font-size: 1.3em; */
   font-weight: 450;
   margin: inherit;
   padding: inherit;
