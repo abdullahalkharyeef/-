@@ -2,63 +2,68 @@
 /* font-family: 'Lateef', serif; */
 html{
   background-color: snow;
+  width: fit-content;
+  height: fit-content;
 }
 #start{
+font-size: -webkit-xxx-large;
 font-family: 'Lateef', serif;
 /* display: block; */
 text-align: center;
-margin: inherit;
-font-size: 5.9em;
+margin: 25% 0% 0% 0%;
 padding: inherit;
 font-weight: 650;
 width: 100%;
-height: 98%;
+height: 50%;
 position: absolute;
 top: 0;
 left: 0;
 }
 .start{
   margin: 20% 0% 0% 0%;
-  font-size: 1.2em;
   color: #4d81b1;
 }
 #aayaStart{
+font-size: -webkit-xxx-large;
 margin: 5% 5% 0% 5%;
 font-size: 0.6em;
 color: #4CAF50;
 }
 #list{
   /* display: none; */
+  font-size: -webkit-xxx-large;
   font-family: 'Lateef', serif;
-  font-size: 4.4em;
+  font-size: 0.6em;
   text-align: center;
   color: #4d81b1;
-  margin: inherit;
+  margin: 40% 0% 0% 0%;
   padding: inherit;
-  font-weight: 800;
+  font-weight: bolder;
   width: 100%;
-  height: 100%;
+  height: 50%;
   position: absolute;
   top: 0;
   left: 0;
 }
 #listthaqafa{
+  font-size: -webkit-xxx-large;
   font-family: 'Lateef', serif;
-  font-size: 4.4em;
+  font-size: 0.9em;
   text-align: center;
   color: #4d81b1;
   margin: inherit;
   padding: inherit;
   font-weight: 800;
   width: 100%;
-  height: 100%;
+  height: 50%;
   position: absolute;
   top: 0;
   left: 0;
 }
 #listalom{
+  font-size: -webkit-xxx-large;
   font-family: 'Lateef', serif;
-  font-size: 4.4em;
+  font-size: 0.9em;
   /* text-align: center; */
   color: #4d81b1;
   margin: inherit;
@@ -72,17 +77,20 @@ color: #4CAF50;
 }
 
 .linavbar {
+  font-size: -webkit-xxx-large;
   /* float: right; */
   list-style-type: none;
   font-family: 'Lateef', serif;
 }
 
 .bigsize {
-  font-size: 4.4em;
+  font-size: -webkit-xxx-large;
+  font-size: 0.6em;
   color: black;
 }
 
 li a {
+  font-size: -webkit-xxx-large;
   font-family: 'Lateef', serif;
   text-align: center;
   text-decoration: none;
@@ -93,6 +101,11 @@ li a:hover:not(.active) {
   background-color: #111;
 }
 
+li {
+  list-style-position: inside;
+  font-size: -webkit-xxx-large;
+}
+
 .active {
   font-family: 'Lateef', serif;
   background-color: #4CAF50;
@@ -100,7 +113,8 @@ li a:hover:not(.active) {
   font-weight: bold;
   padding-left: 2%;
   padding-right: 2%;
-  font-size: 0.9em;
+  font-size: -webkit-xxx-large;
+  font-size: 0.7em;
   /* padding-left: 130%;
   padding-bottom: 100% */
 }
@@ -111,10 +125,11 @@ href{
 
 
 ol{
-  margin: 30% 20% 0% 0%;
+  margin: 30% 0% 0% 0%;
+  padding-inline-start: 0%;
 }
 #olList{
- margin: 20% 5% 0% 0%;
+ margin: 20% 2% 0% 2%;
 }
 span{
  color: #4CAF50;
@@ -128,14 +143,17 @@ span{
   padding: inherit;
   width: 100%;
   height: 100%;
-  position: absolute
+  position: absolute;
+  font-size: -webkit-xxx-large;
   top: 0;
   left: 0;
 }
-#video{
-  text-align: center;
-}
+/* #video{
+  text-align: right;
+} */
 iframe {
   margin: 6% 8% 2% 8%;
   padding: inherit;
+  /* height: 600px; */
+  width: -webkit-fill-available;
 }
