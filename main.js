@@ -223,7 +223,6 @@ function goListthaqafa() {
    list.linavbar=true;
    list.start=false;
    list.Firstlist=false;
-   list.Listthaqafa=true;
 }
 function goListalom() {
   list.Listalom=true;
