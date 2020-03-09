@@ -24,7 +24,7 @@ var list = new Vue ({
     hadith:false,
     syrah:false,
     tarikh:false,
-    aqydah:false,
+    aqydah:true,
     sections:['أبجديَّات الثقافة للجيل الصاعد','مداخل العلوم للجيل الصاعد'],
     listthaqafa:['السيرة',''],
     listalom: ['اللُّغة العربيَّة','علوم القرآن','علم الحديث','دراسة السيرة','علم التَّاريخ','علم العقيدة'],
